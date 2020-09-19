@@ -1,0 +1,206 @@
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	background-image: url("images/full-sky-with-stars.svg");
+	background-size: cover;
+	overflow: hidden;
+}
+
+/* Background SVG */
+
+.container {
+	min-width: 100%;
+	max-width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+.sky-left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 500px;
+	height: 100px;
+	animation: from-left 30s linear infinite;
+}
+
+.sky-right {
+	position: absolute;
+	top: 5%;
+	right: 0;
+	width: 500px;
+	height: 100px;
+	animation: from-right 25s linear infinite;
+}
+
+.background {
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	position: relative;
+}
+
+.background-fix {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.mountain {
+	width: 70%;
+	align-items: flex-end;
+	animation: from-top 5s;
+}
+
+.moon-light {
+	margin-right: -250px;
+	width: 400px;
+	animation: from-top 5.3s;
+}
+
+.back-tree {
+	width: 100%;
+	position: absolute;
+	margin-bottom: 68px;
+	animation: from-top 5s;
+}
+
+
+/* Train and bridge */
+
+.main {
+	position: absolute;
+	width: 100%;
+	top: 36%;
+}
+
+.bridge {
+	width: 100%;
+	height: 200px;
+	animation: from-top 5s;
+}
+
+.train {
+	width: 30%;
+	position: absolute;
+	top: 4%;
+	left: -25%;
+	animation: from-left 20s linear infinite;
+}
+
+
+/* Down side */
+
+.down {
+	position: relative;
+}
+
+.land-down {
+	width: 110%;
+	margin-top: -80px;
+	animation: from-bottom 1s;
+}
+
+.land-down-tree-left {
+	position: absolute;
+	top: -50%;
+	left: 25%;
+	width: 200px;
+	animation: from-bottom 1.5s;
+}
+
+.land-down-tree-right {
+	position: absolute;
+	top: -20%;
+	right: 25%;
+	width: 200px;
+	animation: from-bottom 1.5s;
+}
+
+.land-up {
+	position: absolute;
+	/* height: 100%; */
+	width: 1550px;
+	top: 46%;
+	left: -10%;
+	animation: from-bottom 2s;
+}
+
+.land-up-tree-left {
+	position: absolute;
+	top: -60%;
+	left: 10%;
+	height: 300px;
+	animation: from-bottom 2.5s;
+}
+
+.land-up-tree-right {
+	position: absolute;
+	top: -80%;
+	right: 10%;
+	height: 300px;
+	animation: from-bottom 2.5s;
+}
+
+
+/* Animations */
+@keyframes from-top {
+	0% {
+		transform: translateY(-1000px);
+	}
+
+	90% {
+		transform: translateY(20px);
+		opacity: 1;
+	}
+
+	100% {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+@keyframes from-bottom {
+	0% {
+		transform: translateY(1000px);
+	}
+
+	90% {
+		transform: translateY(-20px);
+		opacity: 1;
+	}
+
+	100% {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+
+@keyframes from-left {
+	0% {
+		transform: translateX(-1000px);
+	}
+
+	100% {
+		transform: translateX(2000px);
+	}
+}
+
+@keyframes from-right {
+	0% {
+		transform: translateX(1000px);
+	}
+
+	100% {
+		transform: translateX(-2000px);
+	}
+}
